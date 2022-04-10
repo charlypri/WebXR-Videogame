@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="./media/rsz_favicon.png"/>
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
+  </head>
+
+	<body style="margin : 0px; overflow: hidden;">
+
+		
+	<a-scene webxr="requiredFeatures: hit-test, viewer, local-floor;">
+
+		<a-assets>
+			<a-asset-item id="alien" src="3dmodels/alien/scene.gltf"></a-asset>
+			<a-mixin id="alienSize" position="0 0 0"  scale="0.0007 0.0007 0.0007" ></a-mixin>
+
+      <!-- <a-asset-item id="clock" src="3dmodels/clock/scene.gltf"></a-asset>
+			<a-mixin id="clockSize" position="0 0 0"  scale="0.0007 0.0007 0.0007" ></a-mixin> -->
+
+		</a-assets>
+  <a-text class="texto_inicial"  align="center" value="La partida comienza en breves \n \n \n \n \n Por favor usa el circulo azul para identificar superficies en tu habitacion"scale="1 1 1" position="0 2 -4"></a-text>
+
+  <a-entity detect-positions></a-entity>
+
+		<!-- <a-entity id="Alienmodel" ><a-entity gltf-model="#alien"
+				  mixin="alienSize"
+				  color="yellow" 
+				  class="selectable"
+          stare-to-camera
+				  destroy-objective="color: #00ff00; timeToDestroy: 1.5"
+				  movimiento-ciclico="speed: 0.006"></a-entity>
+    </a-entity> -->
+
+    <a-entity camera rotation-reader>
+			<a-cursor id="camera"  raycaster="objects: .selectable"></a-cursor>
+		</a-entity>
+
+    <a-entity id="reticle">
+        <a-ring color="teal" radius-inner="0.15" radius-outer="0.2" rotation="-90 0 0">
+          <a-circle  color="teal" radius="0.05" ></a-circle>
+        </a-ring>
+      <a-entity>
+
+	</a-scene>
+    
+		
+
+	</body>
+  <script type="text/javascript" src="script_AR.js"></script>
+</html>

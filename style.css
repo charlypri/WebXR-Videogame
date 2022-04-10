@@ -1,0 +1,253 @@
+
+/*********************** PANTALLA INICIAL ***********************/
+
+body{
+    cursor :auto;
+    background-image: url('media/edited.jpg');
+    background-size: cover ;
+    background-attachment: fixed;
+    color:white;
+  }
+  h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Bungee';
+    font-size: 5.5em;
+    text-align: center;
+  }
+
+  .row{
+    text-align: center;
+    display:flex;
+  }
+  button{
+    color: white;
+    font-size: 3em;
+    font-family: 'Bungee';
+    margin: 5% 2.5% 0 2.5%;
+    width: auto;
+    height: auto;
+    min-height: 165px;
+    border-radius: 10px;
+  }
+  button:hover{
+    /* background: #840705 ; */
+    cursor: pointer;
+  }
+  #but_principal{
+    min-width: 360px;
+    margin-top: 55%;
+    font-size: 3.5em;
+    background: #e61610;
+    border:rgb(175, 20, 0) solid 5px;
+  }
+  .but_sec{
+    min-width: 380px;
+    background: #d39c2f;
+    border: solid #a77a23 5px;
+    text-align: center;
+    padding:0;
+    font-size: 2.4rem;
+  }
+  .but_dif{
+    margin-top: 11.5%;
+    padding:0;
+    font-size: 2.6rem;
+  }
+  .manual{
+    position:absolute;
+    z-index: 1;
+    width:15%;
+    left:80%;
+    /* display:flex;
+    justify-content:center; */
+    /* flex-wrap: wrap; */
+    font-family: 'Quicksand', sans-serif;
+  }
+  #ayuda{
+    text-align: center;
+  }
+  #manual{
+    width:100%;
+  }
+  
+  .buttons{
+    /* position: relative; */
+    display:flex;
+    justify-content:center;
+  }
+
+  #facil{
+    min-width: 230px;
+    background: #72bb53;
+    border: solid #4c7a34 5px;
+  }
+  #medio{
+    min-width: 230px;
+    background: #fec63d;
+    border: solid #d39c2f 5px;
+  }
+  #dificil{
+    min-width: 230px;
+    background: #e61610;
+    border: solid #840705 5px;
+  }
+  .top{    
+    margin-top: 26%;
+    display:none;
+  }
+  
+
+  /*********************** ESTADISTICAS ***********************/
+  #background1{
+    background-image: url('media/edited_borroso.jpg');
+  }
+  .titulo_pantalla{
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    font-size: 3rem;
+    /* margin:2% 5% 0 5%; */
+  }
+  .body_frame{
+    padding: 4%;
+  }
+  #arrow{
+    width:auto;
+    /* padding:4% 4% 0 4%; */
+    max-width: 80px;
+  }
+  .texto_stats{
+    font-family: 'Quicksand', sans-serif;
+    font-size:1.7em ;
+    color:rgb(177, 172, 172);
+  }
+
+  hr{
+    width: auto;
+    max-width: 100%;
+  }
+  .scores{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+
+  }
+  .score_block{
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+
+  span.procent {
+    display: block;
+    position: absolute;
+    font-family: 'Asap', sans-serif;
+    left: 50%;
+    top: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+  }
+  
+  span.procent::after {
+    content: '%';
+  }
+  
+  .canvas-wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  h3{
+    margin:0 0 0 0 ;
+    color:rgb(230, 222, 222);
+  }
+
+
+
+  /*********************** RESULTADOS ***********************/
+  #but_principal2{
+    min-width: 240px;
+    font-size: 2em;
+    background: #e61610;
+    border:rgb(175, 20, 0) solid 5px
+  }
+
+  /*********************** LEADERBOARDS ***********************/
+
+  .row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    font-family: 'Asap', sans-serif;
+    align-items: center;
+  }
+  .row img{
+    width:auto;
+    max-width: 80px;
+
+  }
+  .row h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size:2em ;
+    color:rgb(248, 240, 240);
+  }
+
+  .secondaryrow{
+    background-color:rgb(248, 240, 240, 0.2) ;
+    border-radius: 2;
+  }
+  .secondaryrow img{
+    width:auto;
+    max-width: 60px;
+
+  }
+  .secondaryrow h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size:1.6em ;
+    color:rgb(168, 164, 164);
+  }
+
+
+  /* MODAL */
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 40px;
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.5em ;
+  color:rgb(27, 17, 17);
+  border-radius: 10px;
+  border: 5px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

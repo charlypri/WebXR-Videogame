@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SPACESHIP-AR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./media/rsz_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Quicksand:wght@600&Asap:wght@600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="titulo">SPACESHIP AR</h1>
+    <div class="manual" >
+      <img id="manual" src="media/instructions.png" onclick="showModal();" alt="">
+      <p id="ayuda">Ayuda</p> 
+    </div>
+    <div class="buttons top">
+      <button  class = "but_dif"type="button" name="button" id="facil" >FACIL</button>
+      <button  class = "but_dif" type="button" name="button" id="medio">MEDIO</button>
+      <button  class = "but_dif" type="button" name="button" id="dificil">DIFICIL</button>
+    </div>
+    <div class="buttons">
+      <button onclick="selectDifficulty()" id = "but_principal" type="button" name="button" >New Game</button>
+    </div>
+    <div class="buttons">
+      <button onclick="location.href='./Estadisticas.html';" class = "but_sec"type="button" name="button"  >Estadisticas</button>
+      <button onclick="location.href='./Leaderboard.html';" class = "but_sec" type="button" name="button">Leaderboard</button>
+    </div>
+    </div>
+    
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>El Botón de NEW GAME muestra las distintas dificultades de juego y permite empezar una partida.</p>
+        <p>El objetivo del juego consiste en apuntar durante mas de 1 segundo a los distintos enemigos que aparezcan a tu alrededor lo mas rápido posible.</p>
+        <p>El Botón de ESTADISTICAS te mostrará tus resultados obtenidos durante tu tiempo de juego</p>
+        <p>El Botón de LEADERBOARDS te mostrará como son tus resultados en comparación con otros usuarios a nivel global y nacional.</p>
+      </div>
+
+    </div>
+  <script>
+    document.getElementById("facil").addEventListener("click", function(){
+      sessionStorage.setItem("dificultad", 1);
+      window.location.href='./Gameplay.html';
+    });
+    document.getElementById("medio").addEventListener("click", function(){
+      sessionStorage.setItem("dificultad", 2);
+      window.location.href='./Gameplay.html';
+    });
+    document.getElementById("dificil").addEventListener("click", function(){
+      sessionStorage.setItem("dificultad", 3);
+      window.location.href='./Gameplay.html';
+    });
+
+  </script>
+  <script src="script.js"></script>
+  </body>
+</html>

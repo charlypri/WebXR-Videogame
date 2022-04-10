@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SPACESHIP-AR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Quicksand:wght@600&Asap:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+  </head>
+  <body id="background1" onload="loadStats()">
+    <div class="body_frame">
+      <a href="./index.html"><img src="/media/arrow.svg" alt="" id="arrow"></a>
+      <h1 class="titulo_pantalla">Estadisticas</h1>
+      <h2 class="texto_stats" style="text-align: end;">General</h2>
+      <hr>
+      
+      <div class = "scores">
+        <div class="texto_stats" style="text-align: center;">
+          <h3> Estabilidad </h3>
+          <div class="canvas-wrap">
+            <canvas class="canvas" width="200" height="200" ></canvas>
+            <span class="procent" style="color:#7fe1ad" ></span>
+          </div>
+        </div>
+
+        <div class="texto_stats" style="text-align: center;">
+          <h3> Precisión</h3>
+          <div class="canvas-wrap">
+            <canvas class="canvas" width="200" height="200" ></canvas>
+            <span class="procent" style="color:#f85f6a"></span>
+          </div>
+        </div>
+
+        <div class="texto_stats" style="text-align: center;">
+          <h3> Velocidad</h3>
+          <div class="canvas-wrap">
+            <canvas class="canvas" width="200" height="200" ></canvas>
+            <span class="procent" style="color:#5f6af8"></span>
+          </div>
+        </div>
+        
+      </div>
+
+      <h2 class="texto_stats" style="text-align: end;">Anteriores Resultados</h2>
+      <hr>
+      <div class="buttons">
+        <button  id = "but_principal2" type="button" name="button">Jugar Otra vez</button>
+      </div>
+      <div class="buttons">
+        <button class = "but_sec"type="button" name="button" onclick="generarPDF()">Guardar Resultados</button>
+        <button class = "but_sec"type="button" name="button"  >Menu</button>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
